@@ -65,6 +65,10 @@ public class User {
       this.email = email;
    }
 
+   public Car getCar() {
+      return car;
+   }
+
    @Override
    public String toString() {
       return "User{" +
