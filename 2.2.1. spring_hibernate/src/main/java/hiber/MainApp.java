@@ -27,13 +27,23 @@ public class MainApp {
       userService.add(new User("User4", "Lastname4", "user4@mail.ru", car4));
 
       List<User> users = userService.listUsers();
-      for (User user : users) {
+      /*for (User user : users) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
          System.out.println();
+      }*/
+
+      for (User user : users) {
+         System.out.println("User = "+user.toString());
+         System.out.println();
       }
+
+
+      //4. Создайте несколько пользователей с машинами, добавьте их в базу данных, вытащите обратно.
+      //5. В сервис добавьте метод, который с помощью hql-запроса будет доставать юзера, владеющего машиной
+      // по ее модели и серии.
 
       context.close();
    }
